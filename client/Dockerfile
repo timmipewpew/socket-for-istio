@@ -1,5 +1,6 @@
-FROM gcc:9.3
+FROM kienkauko/ubuntu:gnu
 COPY . /home/
 WORKDIR /home/
-RUN gcc client.c -o client
+RUN make
 CMD ["./client"]
+EXPOSE 8080
